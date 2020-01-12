@@ -107,6 +107,10 @@ const membersJSON =
 
 function memberclick()
 {
+    document.querySelector('#member-button').classList.add("buttonselected");
+    document.querySelector('#event-button').classList.remove("buttonselected");
+
+
     document.querySelector('#members').classList.remove("displayinactive");
     document.querySelector('#members').classList.add("displayactive");
     document.querySelector('#events').classList.remove("displayactive");
@@ -116,6 +120,9 @@ function memberclick()
 
 function eventclick()
 {
+    document.querySelector('#member-button').classList.remove("buttonselected");
+    document.querySelector('#event-button').classList.add("buttonselected");
+
     document.querySelector('#events').classList.remove("displayinactive");
     document.querySelector('#events').classList.add("displayactive");
     document.querySelector('#members').classList.remove("displayactive");
@@ -141,6 +148,8 @@ function handleevent(event)
 
     eventsJSON[clickedyear].forEach(event=>{event_HTML+=`<div class="eventCard">${event.name}</div>`});
     events.innerHTML=event_HTML;
+
+    console.log(member_HTML);
 }
 
 years.forEach(li=>li.addEventListener('click',handleevent));

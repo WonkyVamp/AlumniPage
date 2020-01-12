@@ -4,6 +4,8 @@
     <head>
     
         <link rel="stylesheet" href="stylemain.css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/57a2227512.js" crossorigin="anonymous"></script>
     
     </head>
     
@@ -11,49 +13,67 @@
         
         <div class="wrapper">
             <nav>
-                <img src="https://www.iecsemanipal.com/images/logos/iecse-logo-black.png">
-                Alumni
+                <img id = "IECSElogo" src="https://www.iecsemanipal.com/images/logos/iecse-logo-white.png">
+                <em id = "alumniText">   Alumni</em>
             </nav>
         
           
             <div class="content">
                 
                 <div class="sidebar">
-                    <ul class="yearcontainer">
-                        <li class="yearli active"><a class="year">2019</a></li>
-                        <li class="yearli"><a class="year">2018</a></li>
-                        <li class="yearli"><a class="year">2017</a></li>
-                        <li class="yearli"><a class="year">2016</a></li>
-                        <li class="yearli"><a class="year">2015</a></li>
-                        <li class="yearli"><a class="year">2014</a></li>
-                        <li class="yearli"><a class="year">2013</a></li>
-                        <li class="yearli"><a class="year">2012</a></li>
-                        <li class="yearli"><a class="year">2011</a></li>
-                        <li class="yearli"><a class="year">2010</a></li>
-                        <li class="yearli"><a class="year">2009</a></li>
-                        <li class="yearli"><a class="year">2008</a></li>
-                    </ul>
+
+                    <div class = "sidebar-headings">
+                        <i class="fas fa-calendar-week"></i><strong style="padding-left: 25px; vertical-align: middle;">Year</strong>
+                        <ul style="line-height: 20%;">
+                            <li class="yearli"><a class="year">2019</a></li>
+                            <li class="yearli"><a class="year">2018</a></li>
+                            <li class="yearli"><a class="year">2017</a></li>
+                            <li class="yearli"><a class="year">2016</a></li>
+                            <li class="yearli"><a class="year">2015</a></li>
+                            <li class="yearli"><a class="year">2014</a></li>
+                            <li class="yearli"><a class="year">2013</a></li>
+                            <li class="yearli"><a class="year">2012</a></li>
+                            <li class="yearli"><a class="year">2011</a></li>
+                            <li class="yearli"><a class="year">2010</a></li>
+                            <li class="yearli"><a class="year">2009</a></li>
+                            <li class="yearli"><a class="year">2008</a></li>
+                        </ul>
+                    </div>
+                    <div class = "sidebar-headings">
+                        <i class="fas fa-images"></i><strong style="padding-left: 25px;">Gallery</strong>
+                    </div>
                 </div>
               
-                <div class="main"><div class="toggle">
-                    <button onclick=memberclick()>MEMBERS</button>
-                    <button onclick=eventclick()>EVENTS</button> 
-                </div>
+                <div class="main">
+
+                    <div id = "toggle-button-group">
+                        
+                        <button id = "member-button" class = "member-button-style" onclick = memberclick()>
+                            <strong>Members</strong>
+                        </button>
+                    
+                        <button id = "event-button" class = "event-button-style" onclick = eventclick()>
+                            <strong>Events</strong>
+                        </button> 
+                    
+                    </div>
                 
-                <div class="displayactive" id="members">
-                    Lorem ipsum, dolor sit amet consectetur
-                    Members will come here
-                </div>
+                    <div class="displayactive" id="members">
+                        Lorem ipsum, dolor sit amet consectetur
+                        Members will come here
+                    </div>
 
-                <div class="displayinactive" id="events">
-                    Events will come here
-                    Devesh BKL hai Nishkal++ 
-                </div>
+                    <div class="displayinactive" id="events">
+                        Events will come here
+                        Devesh BKL hai Nishkal++ 
+                    </div>
             
+                </div>
+
             </div>
-
+    
         </div>
-
+    
     </body>
 
     <script src="./code.js"></script>
