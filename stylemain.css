@@ -3,6 +3,20 @@
   margin: 0;
   padding: 0;
 }
+.toggle
+{
+  position: relative;
+  left: 80vw;
+  color: blueviolet;
+}
+.buttonactive
+{
+  background-color:black ;
+}
+.buttoninactive
+{
+  background-color:white ;
+}
 a
 {
 
@@ -73,4 +87,12 @@ nav
 {
   background-color: white;
   color: black;
+}
+.displayactive 
+{
+  display: inline;
+}
+.displayinactive
+{
+  display: none;
 }
