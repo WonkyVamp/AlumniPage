@@ -3,23 +3,56 @@ const content=document.querySelector('#members');
 
 
 const details = {
+  
   2019:[
-    {name:'devesh'},
-    {name:'navya'},
-    {name:'deveshfjio'},
-    {name:'navyahfweuf'},
-    {name:'deveshfjio'},
-    {name:'navyahfweuf'},
-    {name:'deveshfjio'},
-    {name:'navyahfweuf'},
-    {name:'deveshfjio'},
-    {name:'navyahfweuf'}
+    {name:'2019 ABC'},
+    {name:'2019 DEF'},
+    {name:'2019 GHI'},
+    {name:'2019 JKL'},
+    {name:'2019 MNO'}
   ],
+  
   2018:[
-    {name:'deveshfjio'},
-    {name:'navyahfweuf'}
-  ]
+    {name:'2018 ABC'},
+    {name:'2018 DEF'},
+    {name:'2018 GHI'},
+    {name:'2018 JKL'},
+    {name:'2018 MNO'}
+  ],
+  
+  2017:[
+    {name:'2017 ABC'},
+    {name:'2017 DEF'},
+    {name:'2017 GHI'},
+    {name:'2017 JKL'},
+    {name:'2017 MNO'}
+  ],
+  
+  2016:[
+    {name:'2016 ABC'},
+    {name:'2016 DEF'},
+    {name:'2016 GHI'},
+    {name:'2016 JKL'},
+    {name:'2016 MNO'}
+  ],
+  
+  2015:[
+    {name:'2015 ABC'},
+    {name:'2015 DEF'},
+    {name:'2015 GHI'},
+    {name:'2015 JKL'},
+    {name:'2015 MNO'}
+  ],
+  
+  2014:[
+    {name:'2014 ABC'},
+    {name:'2014 DEF'},
+    {name:'2014 GHI'},
+    {name:'2014 JKL'},
+    {name:'2014 MNO'}
+  ],
 };
+
 function memberclick()
 {
   document.querySelector('#members').classList.remove("displayinactive");
@@ -43,7 +76,7 @@ function reset()
 }
 function handleevent(event)
 {
-reset();
+  reset();
  event.target.classList.add("active");
  var clickedyear=event.target.innerText;
  var html = "";
