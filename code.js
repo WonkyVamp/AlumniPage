@@ -1,6 +1,6 @@
 const years = document.querySelectorAll('.year');
-const members=document.querySelector('#members');
-const events=document.querySelector('#events');
+const members = document.querySelector('#members');
+const events = document.querySelector('#events');
 
 const eventsJSON = 
 {
