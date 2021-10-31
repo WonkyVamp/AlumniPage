@@ -45,6 +45,47 @@ const eventsJSON =
         {name:'2014 DEF EVENT'},
         {name:'2014 GHI EVENT'},
     ],
+    2013:
+    [
+        {name:'2019 ABC EVENT'},
+        {name:'2019 DEF EVENT'},
+        {name:'2019 GHI EVENT'},
+    ],
+
+    2012:
+    [
+        {name:'2018 ABC EVENT'},
+        {name:'2018 DEF EVENT'},
+        {name:'2018 GHI EVENT'},
+    ],
+
+    2011:
+    [
+        {name:'2017 ABC EVENT'},
+        {name:'2017 DEF EVENT'},
+        {name:'2017 GHI EVENT'},
+    ],
+
+    2010:
+    [
+        {name:'2016 ABC EVENT'},
+        {name:'2016 DEF EVENT'},
+        {name:'2016 GHI EVENT'},
+    ],
+
+    2009:
+    [
+        {name:'2015 ABC EVENT'},
+        {name:'2015 DEF EVENT'},
+        {name:'2015 GHI EVENT'},
+    ],
+
+    2008:
+    [
+        {name:'2014 ABC EVENT'},
+        {name:'2014 DEF EVENT'},
+        {name:'2014 GHI EVENT'},
+    ],
 };
 
 const membersJSON = 
@@ -103,6 +144,60 @@ const membersJSON =
         {name:'2014 MNO'}
     ],
     
+    2013:
+    [
+        {name:'2019 ABC'},
+        {name:'2019 DEF'},
+        {name:'2019 GHI'},
+        {name:'2019 JKL'},
+        {name:'2019 MNO'}
+    ],
+
+    2012:
+    [
+        {name:'2018 ABC'},
+        {name:'2018 DEF'},
+        {name:'2018 GHI'},
+        {name:'2018 JKL'},
+        {name:'2018 MNO'}
+    ],
+    
+    2011:
+    [
+        {name:'2017 ABC'},
+        {name:'2017 DEF'},
+        {name:'2017 GHI'},
+        {name:'2017 JKL'},
+        {name:'2017 MNO'}
+    ],
+    
+    2010:
+    [
+        {name:'2016 ABC'},
+        {name:'2016 DEF'},
+        {name:'2016 GHI'},
+        {name:'2016 JKL'},
+        {name:'2016 MNO'}
+    ],
+        
+    2009:
+    [
+        {name:'2015 ABC'},
+        {name:'2015 DEF'},
+        {name:'2015 GHI'},
+        {name:'2015 JKL'},
+        {name:'2015 MNO'}
+    ],
+    
+    2008:
+    [
+        {name:'2014 ABC'},
+        {name:'2014 DEF'},
+        {name:'2014 GHI'},
+        {name:'2014 JKL'},
+        {name:'2014 MNO'}
+    ],
+    
 };
 
 function memberclick()
@@ -122,9 +217,10 @@ function eventclick()
 {
     document.querySelector('#member-button').classList.remove("buttonselected");
     document.querySelector('#event-button').classList.add("buttonselected");
-
+    
     document.querySelector('#events').classList.remove("displayinactive");
     document.querySelector('#events').classList.add("displayactive");
+    
     document.querySelector('#members').classList.remove("displayactive");
     document.querySelector('#members').classList.add("displayinactive");
 }
@@ -146,10 +242,10 @@ function handleevent(event)
     membersJSON[clickedyear].forEach(person=>{member_HTML+=`<div class="memberCard">${person.name}</div>`});
     members.innerHTML=member_HTML;
 
-    eventsJSON[clickedyear].forEach(event=>{event_HTML+=`<div class="eventCard">${event.name}</div>`});
+    eventsJSON[clickedyear].forEach(event => {event_HTML+=`<div class="eventCard">${event.name}</div>`});
     events.innerHTML=event_HTML;
 
     console.log(member_HTML);
 }
 
-years.forEach(li=>li.addEventListener('click',handleevent));
+years.forEach(li => li.addEventListener('click',handleevent));
